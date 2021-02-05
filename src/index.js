@@ -65,12 +65,10 @@ const onRequest = (request, response) => {
   //console.log(request.headers);
   const parsedUrl = url.parse(request.url);
   const pathname = parsedUrl.pathname;
-  //console.log("parsedUrl=", parsedUrl);
+  console.log("parsedUrl=", parsedUrl);
   //console.log("pathname=", pathname);
   
-  pathname = pathname + "/random-joke";
-  
-  if (pathname == "/") {
+  if (pathname == "/random-joke") {
 	  response.writeHead(200, { 'Content-Type': 'application/json'});	// send response headers
 	  response.write(getRandomNumberJoke());	// send content
 	  response.end();	// close connection
