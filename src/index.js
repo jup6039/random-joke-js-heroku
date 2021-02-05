@@ -64,7 +64,7 @@ const getRandomNumberJoke = () => {
 const onRequest = (request, response) => {
   //console.log(request.headers);
   const parsedUrl = url.parse(request.url);
-  const pathname = parsedUrl.pathname;
+  const pathname = parsedUrl.pathname + "/randomjoke";
   //console.log("parsedUrl=", parsedUrl);
   //console.log("pathname=", pathname);
   
